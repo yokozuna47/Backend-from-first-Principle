@@ -19,6 +19,8 @@ Site : https://backend-premiers-principes.vercel.app
 - [ ] Valider le tout sur un chapitre pilote court : **ch. 16 Graceful Shutdown**
 
 ## Phase 2 — Chapitres (pour chaque chapitre : traduction + tooltips + section sécurité + 3-5 exos + code TypeScript)
+Concepts avancés (source : conversation Claude de juillet) intégrés en sections « Pour aller plus loin » dans leur chapitre-maison — pas de chapitre bonus, décision actée :
+- idempotency keys → ch. 07 (et écho ch. 01) · N+1 masqué par l'ORM → ch. 08 · cache stampede + stale-while-revalidate → ch. 09 · backpressure → ch. 10 · outbox pattern → ch. 23
 - [ ] 16. Arrêt gracieux ← PILOTE
 - [ ] 01. HTTP & CORS
 - [ ] 02. Le routage backend
@@ -45,7 +47,7 @@ Site : https://backend-premiers-principes.vercel.app
 - [ ] 24. WebSockets & Temps réel
 
 ## Phase 3 — Finitions
-- [ ] Page glossaire globale (agrégée depuis les tooltips)
+- [ ] Page glossaire globale (agrégée depuis les tooltips) — sert de fiche de révision de fin de parcours
 - [ ] Audit des trous 2026 (HTTP/3, rate limiting, idempotency keys, OpenTelemetry, outbox...) → chapitres bonus si besoin
 - [ ] Meta/SEO en français sur toutes les pages
 - [ ] Relecture complète
@@ -57,3 +59,4 @@ Site : https://backend-premiers-principes.vercel.app
 3. Réponses d'exercices visibles uniquement après validation.
 4. Attribution à @DsThakurRawat sur chaque page.
 5. Un chapitre = une session de travail.
+6. Ligne éditoriale : on écrit pour le débutant qui veut monter — objectif : finir la série et pouvoir tenir une discussion avec des devs expérimentés. Le senior pressé n'est pas notre lecteur cible.
