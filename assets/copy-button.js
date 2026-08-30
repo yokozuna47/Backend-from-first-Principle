@@ -17,7 +17,7 @@
       var btn = document.createElement("button");
       btn.type = "button";
       btn.className = "copy-code-button";
-      btn.setAttribute("aria-label", "Copy code");
+      btn.setAttribute("aria-label", "Copier le code");
       btn.innerHTML =
         '<svg class="cb-go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>' +
         '<svg class="cb-ok" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>';

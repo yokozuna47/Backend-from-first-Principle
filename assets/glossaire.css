@@ -1,0 +1,61 @@
+/* Glossaire — tooltips de définition (Backend par les Premiers Principes, version fr) */
+.gloss{
+  position:relative;
+  cursor:help;
+  border-bottom:1px dotted var(--accent, #b8402e);
+  text-decoration:none;
+}
+.gloss::after{
+  content:attr(data-def);
+  position:absolute;
+  left:50%;
+  bottom:calc(100% + 8px);
+  transform:translateX(-50%) translateY(4px);
+  width:max-content;
+  max-width:320px;
+  background:var(--ink, #211e1a);
+  color:var(--paper, #f3ede2);
+  font-size:13.5px;
+  line-height:1.5;
+  font-style:normal;
+  font-weight:400;
+  font-family:"Spline Sans","Hanken Grotesk",sans-serif;
+  padding:10px 14px;
+  border-radius:8px;
+  box-shadow:0 8px 24px -8px rgba(0,0,0,.35);
+  opacity:0;
+  visibility:hidden;
+  transition:opacity .18s ease, transform .18s ease;
+  z-index:500;
+  pointer-events:none;
+  white-space:normal;
+}
+.gloss::before{
+  content:"";
+  position:absolute;
+  left:50%;
+  bottom:calc(100% + 2px);
+  transform:translateX(-50%);
+  border:6px solid transparent;
+  border-top-color:var(--ink, #211e1a);
+  opacity:0;
+  visibility:hidden;
+  transition:opacity .18s ease;
+  z-index:500;
+}
+.gloss:hover::after, .gloss:focus::after, .gloss.gloss-open::after,
+.gloss:hover::before, .gloss:focus::before, .gloss.gloss-open::before{
+  opacity:1;
+  visibility:visible;
+  transform:translateX(-50%) translateY(0);
+}
+/* Mobile : tooltip pleine largeur en bas du terme */
+@media(max-width:600px){
+  .gloss::after{
+    left:0;
+    transform:none;
+    max-width:min(85vw, 300px);
+  }
+  .gloss::before{ left:16px; transform:none; }
+  .gloss:hover::after{ transform:none; }
+}
